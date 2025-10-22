@@ -18,6 +18,7 @@ from .library import (
     pc,
     ribbon,
     routeros,
+    eltex,
 )
 from .registry import Registry, registry
 

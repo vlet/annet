@@ -671,6 +671,12 @@ class NokiaFormatter(JuniperFormatter):
                     commands[(cmd,)] = context
         return commands
 
+class EltexFormatter(BlockExitFormatter):
+    def __init__(self, indent="  "):
+        super().__init__("exit", indent)
+
+    def split(self, text):
+        return self.split_remove_spaces(text)
 
 class RosFormatter(CommonFormatter):
     patch_set_prefix = "set "
